@@ -1,0 +1,147 @@
+/* Make pages full-screen */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #edf3ff, #d8e5ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Main card layout */
+.container {
+  width: 95%;
+  max-width: 500px;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #34495e;
+}
+
+/* Navbar and Buttons */
+.nav-buttons a,
+.nav-bar a,
+button {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  background: #5a79ff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-buttons a:hover,
+.nav-bar a:hover,
+button:hover {
+  background: #3e5de0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.nav-bar {
+  margin-top: 20px;
+}
+
+/* Stopwatch screen */
+.stopwatch-screen {
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  background: #f9fcff;
+  border: 2px solid #e1eaff;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Timer display */
+.display {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Button group inside stopwatch */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  min-width: 100px;
+}
+
+/* Individual button colors */
+.buttons button:nth-child(1) { background: #27ae60; }
+.buttons button:nth-child(2) { background: #e67e22; }
+.buttons button:nth-child(3) { background: #c0392b; }
+.buttons button:nth-child(4) { background: #2980b9; }
+
+/* Laps Section */
+.laps-section {
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  background: #f2f8ff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.laps-section h2 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+.laps-section ul {
+  padding-left: 20px;
+}
+
+.laps-section li {
+  margin: 5px 0;
+  background: #e0edff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+/* History Page List */
+#historyList li {
+  margin: 6px 0;
+  padding: 10px;
+  background: #e8f0ff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  text-align: left;
+}
